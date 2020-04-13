@@ -1,0 +1,12 @@
+<script>
+    (async () => {
+        const importObject = { imports: { } };
+        const ex = 'https://unpkg.com/@wass80/wasm-queue/wasm_queue_bg.wasm';
+        const lc = './pkg/wasm_queue_bg.wasm';
+        const wasm_obj = await WebAssembly.instantiateStreaming(fetch(lc), importObject);
+        const wasm = wasm_obj.instance.exports;
+
+        var ret = wasm.zigzag(10);
+        console.log(ret);
+    })();
+</script>

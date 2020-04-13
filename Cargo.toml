@@ -1,0 +1,10 @@
+[package]
+name = "wasm-queue"
+version = "0.2.1"
+authors = ["wass80 <wasss80@gmail.com>"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
